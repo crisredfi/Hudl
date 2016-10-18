@@ -29,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell">
-                                        <rect key="frame" x="54" y="0.0" width="306" height="185"/>
+                                        <rect key="frame" x="34.666666666666664" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="306" height="185"/>

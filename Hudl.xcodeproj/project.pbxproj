@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9602DD8C368BEC22AB723274 /* Pods_Hudl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */; };
 		F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A071DB678B6001CE815 /* AppDelegate.swift */; };
 		F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A091DB678B6001CE815 /* ViewController.swift */; };
 		F0295A0D1DB678B6001CE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A0B1DB678B6001CE815 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hudl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1925490059627C468029497 /* Pods-Hudl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hudl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hudl/Pods-Hudl.debug.xcconfig"; sourceTree = "<group>"; };
+		DE6F8310FC2F8DD07B6962EF /* Pods-Hudl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hudl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hudl/Pods-Hudl.release.xcconfig"; sourceTree = "<group>"; };
 		F0295A041DB678B6001CE815 /* Hudl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hudl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0295A071DB678B6001CE815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0295A091DB678B6001CE815 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9602DD8C368BEC22AB723274 /* Pods_Hudl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EF56A7CBA712D344062AA46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1925490059627C468029497 /* Pods-Hudl.debug.xcconfig */,
+				DE6F8310FC2F8DD07B6962EF /* Pods-Hudl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9407807ECE533347748B761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F02959FB1DB678B6001CE815 = {
 			isa = PBXGroup;
 			children = (
 				F0295A061DB678B6001CE815 /* Hudl */,
 				F0295A1E1DB678B6001CE815 /* HudlTests */,
 				F0295A051DB678B6001CE815 /* Products */,
+				5EF56A7CBA712D344062AA46 /* Pods */,
+				D9407807ECE533347748B761 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0295A241DB678B6001CE815 /* Build configuration list for PBXNativeTarget "Hudl" */;
 			buildPhases = (
+				B58CB4B1F4E64D97BF47CCC4 /* [CP] Check Pods Manifest.lock */,
 				F0295A001DB678B6001CE815 /* Sources */,
 				F0295A011DB678B6001CE815 /* Frameworks */,
 				F0295A021DB678B6001CE815 /* Resources */,
+				33A4BA4AA95503024A8E81A6 /* [CP] Embed Pods Frameworks */,
+				A8908AD05852C2BCA21D8574 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +228,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33A4BA4AA95503024A8E81A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hudl/Pods-Hudl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8908AD05852C2BCA21D8574 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hudl/Pods-Hudl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58CB4B1F4E64D97BF47CCC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0295A001DB678B6001CE815 /* Sources */ = {
@@ -345,6 +420,7 @@
 		};
 		F0295A251DB678B6001CE815 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1925490059627C468029497 /* Pods-Hudl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5XSFCZJC48;
@@ -358,6 +434,7 @@
 		};
 		F0295A261DB678B6001CE815 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6F8310FC2F8DD07B6962EF /* Pods-Hudl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5XSFCZJC48;
@@ -418,6 +495,7 @@
 				F0295A261DB678B6001CE815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0295A271DB678B6001CE815 /* Build configuration list for PBXNativeTarget "HudlTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +504,7 @@
 				F0295A291DB678B6001CE815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

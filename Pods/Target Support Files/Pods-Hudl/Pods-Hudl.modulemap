@@ -1,0 +1,6 @@
+framework module Pods_Hudl {
+  umbrella header "Pods-Hudl-umbrella.h"
+
+  export *
+  module * { export * }
+}

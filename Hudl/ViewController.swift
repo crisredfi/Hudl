@@ -31,18 +31,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath)
         cell.backgroundColor = UIColor.black
         // Configure the cell
         return cell
     }
-    
+
     // MARK: UICollectionViewDelegateFlowLayout
     // lets modify the width of the collection view for iphones to fit full screen
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width = UIScreen.main.bounds.width
         let cell = collectionView.cellForItem(at: indexPath)
         // check for heigh. if unwrap fails, assign default height.
@@ -58,7 +57,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         return CGSize(width: width, height: height)
     }
-
-
+    
 }
 
