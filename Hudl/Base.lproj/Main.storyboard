@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell" customModule="Hudl" customModuleProvider="target">
                                         <rect key="frame" x="35" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -96,6 +96,12 @@
                                             <constraint firstAttribute="trailing" secondItem="yMP-zq-9bV" secondAttribute="trailing" id="SLn-4T-11v"/>
                                             <constraint firstItem="yMP-zq-9bV" firstAttribute="leading" secondItem="V3e-z9-Lex" secondAttribute="leading" id="jiB-ic-4r5"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="youtubeFavourite" destination="WKt-FI-2Rx" id="vvr-eX-gY2"/>
+                                            <outlet property="youtubeImage" destination="JQj-fA-UuF" id="fe8-kE-jEe"/>
+                                            <outlet property="youtubeSubtitle" destination="peY-lp-DFK" id="Ie4-yf-Kok"/>
+                                            <outlet property="youtubeTitle" destination="JeK-gB-IpK" id="cUF-Ii-Veo"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
