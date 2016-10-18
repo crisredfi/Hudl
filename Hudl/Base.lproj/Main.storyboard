@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-m4-EnD">
@@ -28,8 +28,8 @@
                                     <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell">
-                                        <rect key="frame" x="34.666666666666664" y="0.0" width="306" height="185"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex">
+                                        <rect key="frame" x="35" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="306" height="185"/>
@@ -62,8 +62,8 @@
                                                                         </stackView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-FI-2Rx">
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="80" id="8jQ-9Y-tnA"/>
-                                                                                <constraint firstAttribute="height" constant="50" id="jYA-0r-JfW"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8jQ-9Y-tnA"/>
+                                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="jYA-0r-JfW"/>
                                                                             </constraints>
                                                                             <state key="normal" title="Button"/>
                                                                         </button>
@@ -96,12 +96,6 @@
                                             <constraint firstAttribute="trailing" secondItem="yMP-zq-9bV" secondAttribute="trailing" id="SLn-4T-11v"/>
                                             <constraint firstItem="yMP-zq-9bV" firstAttribute="leading" secondItem="V3e-z9-Lex" secondAttribute="leading" id="jiB-ic-4r5"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="favouritesButton" destination="WKt-FI-2Rx" id="D1k-Aa-NOg"/>
-                                            <outlet property="youtubeImage" destination="JQj-fA-UuF" id="lXr-qL-I7p"/>
-                                            <outlet property="youtubeSubtitle" destination="peY-lp-DFK" id="g5U-G2-NFN"/>
-                                            <outlet property="youtubeTitle" destination="JeK-gB-IpK" id="JdF-SH-MyJ"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

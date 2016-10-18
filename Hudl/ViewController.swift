@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let kCellMargins: CGFloat = 14
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     fileprivate let reuseIdentifier = "hudlCell"
@@ -48,14 +50,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let height = cell?.bounds.size.height ?? CGFloat(185)
 
         switch UIDevice.current.userInterfaceIdiom {
-        case .pad, .unspecified:
+        case .pad:
             width = width / 2
             break
         default:
             break
         }
 
-        return CGSize(width: width, height: height)
+        return CGSize(width: width - kCellMargins, height: height)
     }
     
 }
