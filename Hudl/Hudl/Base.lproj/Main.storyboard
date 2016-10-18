@@ -22,17 +22,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-m4-EnD">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zup-8f-usi">
-                                    <size key="itemSize" width="374" height="185"/>
+                                    <size key="itemSize" width="306" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="185"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell">
+                                        <rect key="frame" x="54" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="185"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="306" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-zq-9bV">
@@ -96,8 +96,19 @@
                                             <constraint firstAttribute="trailing" secondItem="yMP-zq-9bV" secondAttribute="trailing" id="SLn-4T-11v"/>
                                             <constraint firstItem="yMP-zq-9bV" firstAttribute="leading" secondItem="V3e-z9-Lex" secondAttribute="leading" id="jiB-ic-4r5"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="favouritesButton" destination="WKt-FI-2Rx" id="D1k-Aa-NOg"/>
+                                            <outlet property="youtubeImage" destination="JQj-fA-UuF" id="lXr-qL-I7p"/>
+                                            <outlet property="youtubeSubtitle" destination="peY-lp-DFK" id="g5U-G2-NFN"/>
+                                            <outlet property="youtubeTitle" destination="JeK-gB-IpK" id="JdF-SH-MyJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sN7-Mt-j7G"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="p57-7B-W7R"/>
+                                    <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="OEl-sL-gJL"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
