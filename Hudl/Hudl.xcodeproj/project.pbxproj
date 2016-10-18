@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A071DB678B6001CE815 /* AppDelegate.swift */; };
+		F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A091DB678B6001CE815 /* ViewController.swift */; };
+		F0295A0D1DB678B6001CE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A0B1DB678B6001CE815 /* Main.storyboard */; };
+		F0295A101DB678B6001CE815 /* Hudl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */; };
+		F0295A121DB678B6001CE815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0295A111DB678B6001CE815 /* Assets.xcassets */; };
+		F0295A151DB678B6001CE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */; };
+		F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A1F1DB678B6001CE815 /* HudlTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0295A1C1DB678B6001CE815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F02959FC1DB678B6001CE815 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0295A031DB678B6001CE815;
+			remoteInfo = Hudl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0295A041DB678B6001CE815 /* Hudl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hudl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0295A071DB678B6001CE815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0295A091DB678B6001CE815 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0295A0C1DB678B6001CE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hudl.xcdatamodel; sourceTree = "<group>"; };
+		F0295A111DB678B6001CE815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0295A141DB678B6001CE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0295A161DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0295A1B1DB678B6001CE815 /* HudlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HudlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0295A1F1DB678B6001CE815 /* HudlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudlTests.swift; sourceTree = "<group>"; };
+		F0295A211DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0295A011DB678B6001CE815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0295A181DB678B6001CE815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F02959FB1DB678B6001CE815 = {
+			isa = PBXGroup;
+			children = (
+				F0295A061DB678B6001CE815 /* Hudl */,
+				F0295A1E1DB678B6001CE815 /* HudlTests */,
+				F0295A051DB678B6001CE815 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0295A051DB678B6001CE815 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A041DB678B6001CE815 /* Hudl.app */,
+				F0295A1B1DB678B6001CE815 /* HudlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0295A061DB678B6001CE815 /* Hudl */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A071DB678B6001CE815 /* AppDelegate.swift */,
+				F0295A091DB678B6001CE815 /* ViewController.swift */,
+				F0295A0B1DB678B6001CE815 /* Main.storyboard */,
+				F0295A111DB678B6001CE815 /* Assets.xcassets */,
+				F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */,
+				F0295A161DB678B6001CE815 /* Info.plist */,
+				F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */,
+			);
+			path = Hudl;
+			sourceTree = "<group>";
+		};
+		F0295A1E1DB678B6001CE815 /* HudlTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A1F1DB678B6001CE815 /* HudlTests.swift */,
+				F0295A211DB678B6001CE815 /* Info.plist */,
+			);
+			path = HudlTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0295A031DB678B6001CE815 /* Hudl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0295A241DB678B6001CE815 /* Build configuration list for PBXNativeTarget "Hudl" */;
+			buildPhases = (
+				F0295A001DB678B6001CE815 /* Sources */,
+				F0295A011DB678B6001CE815 /* Frameworks */,
+				F0295A021DB678B6001CE815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hudl;
+			productName = Hudl;
+			productReference = F0295A041DB678B6001CE815 /* Hudl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0295A1A1DB678B6001CE815 /* HudlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0295A271DB678B6001CE815 /* Build configuration list for PBXNativeTarget "HudlTests" */;
+			buildPhases = (
+				F0295A171DB678B6001CE815 /* Sources */,
+				F0295A181DB678B6001CE815 /* Frameworks */,
+				F0295A191DB678B6001CE815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0295A1D1DB678B6001CE815 /* PBXTargetDependency */,
+			);
+			name = HudlTests;
+			productName = HudlTests;
+			productReference = F0295A1B1DB678B6001CE815 /* HudlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F02959FC1DB678B6001CE815 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Aleix Guri";
+				TargetAttributes = {
+					F0295A031DB678B6001CE815 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5XSFCZJC48;
+						ProvisioningStyle = Automatic;
+					};
+					F0295A1A1DB678B6001CE815 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5XSFCZJC48;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F0295A031DB678B6001CE815;
+					};
+				};
+			};
+			buildConfigurationList = F02959FF1DB678B6001CE815 /* Build configuration list for PBXProject "Hudl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F02959FB1DB678B6001CE815;
+			productRefGroup = F0295A051DB678B6001CE815 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0295A031DB678B6001CE815 /* Hudl */,
+				F0295A1A1DB678B6001CE815 /* HudlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0295A021DB678B6001CE815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0295A151DB678B6001CE815 /* LaunchScreen.storyboard in Resources */,
+				F0295A121DB678B6001CE815 /* Assets.xcassets in Resources */,
+				F0295A0D1DB678B6001CE815 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0295A191DB678B6001CE815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0295A001DB678B6001CE815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */,
+				F0295A101DB678B6001CE815 /* Hudl.xcdatamodeld in Sources */,
+				F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0295A171DB678B6001CE815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0295A1D1DB678B6001CE815 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0295A031DB678B6001CE815 /* Hudl */;
+			targetProxy = F0295A1C1DB678B6001CE815 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0295A0B1DB678B6001CE815 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0295A0C1DB678B6001CE815 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0295A141DB678B6001CE815 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0295A221DB678B6001CE815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0295A231DB678B6001CE815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0295A251DB678B6001CE815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5XSFCZJC48;
+				INFOPLIST_FILE = Hudl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisredfi.Hudl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F0295A261DB678B6001CE815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5XSFCZJC48;
+				INFOPLIST_FILE = Hudl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisredfi.Hudl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F0295A281DB678B6001CE815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5XSFCZJC48;
+				INFOPLIST_FILE = HudlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisredfi.HudlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hudl.app/Hudl";
+			};
+			name = Debug;
+		};
+		F0295A291DB678B6001CE815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5XSFCZJC48;
+				INFOPLIST_FILE = HudlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisredfi.HudlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hudl.app/Hudl";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F02959FF1DB678B6001CE815 /* Build configuration list for PBXProject "Hudl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0295A221DB678B6001CE815 /* Debug */,
+				F0295A231DB678B6001CE815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0295A241DB678B6001CE815 /* Build configuration list for PBXNativeTarget "Hudl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0295A251DB678B6001CE815 /* Debug */,
+				F0295A261DB678B6001CE815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F0295A271DB678B6001CE815 /* Build configuration list for PBXNativeTarget "HudlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0295A281DB678B6001CE815 /* Debug */,
+				F0295A291DB678B6001CE815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */,
+			);
+			currentVersion = F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */;
+			path = Hudl.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F02959FC1DB678B6001CE815 /* Project object */;
+}
