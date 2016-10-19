@@ -16,6 +16,11 @@
 		F0295A151DB678B6001CE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */; };
 		F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A1F1DB678B6001CE815 /* HudlTests.swift */; };
 		F0295A2E1DB690F5001CE815 /* HudlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A2D1DB690F5001CE815 /* HudlCell.swift */; };
+		F0295A301DB6923D001CE815 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A2F1DB6923D001CE815 /* HTTPService.swift */; };
+		F04BD08B1DB7E14000F2A592 /* HudlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */; };
+		F04BD08D1DB7E92900F2A592 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08C1DB7E92900F2A592 /* ChannelModel.swift */; };
+		F04BD08F1DB808A600F2A592 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08E1DB808A600F2A592 /* VideoModel.swift */; };
+		F04BD0921DB8114B00F2A592 /* ThumbmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD0911DB8114B00F2A592 /* ThumbmailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		F0295A1F1DB678B6001CE815 /* HudlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudlTests.swift; sourceTree = "<group>"; };
 		F0295A211DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0295A2D1DB690F5001CE815 /* HudlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlCell.swift; path = Cells/HudlCell.swift; sourceTree = "<group>"; };
+		F0295A2F1DB6923D001CE815 /* HTTPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPService.swift; path = NetworkService/HTTPService.swift; sourceTree = "<group>"; };
+		F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlViewModel.swift; path = ViewModel/HudlViewModel.swift; sourceTree = "<group>"; };
+		F04BD08C1DB7E92900F2A592 /* ChannelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelModel.swift; path = Models/ChannelModel.swift; sourceTree = "<group>"; };
+		F04BD08E1DB808A600F2A592 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoModel.swift; path = Models/VideoModel.swift; sourceTree = "<group>"; };
+		F04BD0911DB8114B00F2A592 /* ThumbmailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThumbmailModel.swift; path = Models/ThumbmailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +115,17 @@
 		F0295A061DB678B6001CE815 /* Hudl */ = {
 			isa = PBXGroup;
 			children = (
+				F04BD0901DB808F500F2A592 /* Models */,
+				F0295A331DB6926C001CE815 /* Cells */,
+				F0295A321DB69255001CE815 /* ViewControllers */,
+				F0295A311DB69242001CE815 /* NetworkConnection */,
 				F0295A071DB678B6001CE815 /* AppDelegate.swift */,
-				F0295A091DB678B6001CE815 /* ViewController.swift */,
 				F0295A0B1DB678B6001CE815 /* Main.storyboard */,
 				F0295A111DB678B6001CE815 /* Assets.xcassets */,
 				F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */,
 				F0295A161DB678B6001CE815 /* Info.plist */,
 				F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */,
-				F0295A2D1DB690F5001CE815 /* HudlCell.swift */,
+				F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */,
 			);
 			path = Hudl;
 			sourceTree = "<group>";
@@ -124,6 +137,40 @@
 				F0295A211DB678B6001CE815 /* Info.plist */,
 			);
 			path = HudlTests;
+			sourceTree = "<group>";
+		};
+		F0295A311DB69242001CE815 /* NetworkConnection */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A2F1DB6923D001CE815 /* HTTPService.swift */,
+			);
+			name = NetworkConnection;
+			sourceTree = "<group>";
+		};
+		F0295A321DB69255001CE815 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A091DB678B6001CE815 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F0295A331DB6926C001CE815 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0295A2D1DB690F5001CE815 /* HudlCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F04BD0901DB808F500F2A592 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F04BD08E1DB808A600F2A592 /* VideoModel.swift */,
+				F04BD08C1DB7E92900F2A592 /* ChannelModel.swift */,
+				F04BD0911DB8114B00F2A592 /* ThumbmailModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0295A301DB6923D001CE815 /* HTTPService.swift in Sources */,
 				F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */,
+				F04BD0921DB8114B00F2A592 /* ThumbmailModel.swift in Sources */,
 				F0295A101DB678B6001CE815 /* Hudl.xcdatamodeld in Sources */,
+				F04BD08F1DB808A600F2A592 /* VideoModel.swift in Sources */,
 				F0295A2E1DB690F5001CE815 /* HudlCell.swift in Sources */,
 				F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */,
+				F04BD08B1DB7E14000F2A592 /* HudlViewModel.swift in Sources */,
+				F04BD08D1DB7E92900F2A592 /* ChannelModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

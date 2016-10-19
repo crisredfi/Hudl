@@ -13,6 +13,11 @@ fileprivate let kCellMargins: CGFloat = 14
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     fileprivate let reuseIdentifier = "hudlCell"
+    fileprivate var hudlViewModel: HudlViewModel?
+
+    override func awakeFromNib() {
+        hudlViewModel = HudlViewModel()
+    } 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // MARK: collection view data source
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 
 
