@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 fileprivate let kCellMargins: CGFloat = 14
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HudlViewModelProtocol {
+    @IBOutlet weak var hudlCollectionView: UICollectionView!
 
     fileprivate let reuseIdentifier = "hudlCell"
     fileprivate var hudlViewModel: HudlViewModel?
 
     override func awakeFromNib() {
         hudlViewModel = HudlViewModel()
+        hudlViewModel?.delegate = self
     } 
 
     override func viewDidLoad() {
@@ -32,16 +35,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // MARK: collection view data source
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return hudlViewModel?.getNumberOfItems() ?? 0
     }
 
 
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                      for: indexPath)
+                                                      for: indexPath) as! HudlCell
         cell.backgroundColor = UIColor.black
         // Configure the cell
+
+        if let videoModel = try? hudlViewModel?.getItemAtIndex(index: indexPath.row) {
+            cell.youtubeTitle?.text = videoModel?.title ?? ""
+            cell.youtubeSubtitle?.text = videoModel?.publishedAt
+            let imageManager = SDWebImageManager.shared()
+            if let imageURLString = videoModel?.thumnbnails.last?.url {
+
+                let imageURL = URL(string: imageURLString)
+                _ = imageManager?.downloadImage(with: imageURL , options: SDWebImageOptions.refreshCached, progress: nil) {
+                    (image, ErrorType, cacheType, bool, imageURL) -> Void in
+                    cell.youtubeImage?.image = image
+                }
+            }
+        }
+
         return cell
     }
 
@@ -64,6 +82,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         return CGSize(width: width - kCellMargins, height: height)
     }
-    
+
+    // MARK: HudlViewModelDelegate
+    func didReceiveNewContentData() {
+        hudlCollectionView.reloadData()
+    }
 }
 

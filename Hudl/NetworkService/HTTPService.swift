@@ -54,7 +54,7 @@ class HTTPService {
     }
 
     func getVideos(fromChannelId channelId: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
-        let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(channelId)&key=\(apiKey)"
+        let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=\(channelId)&key=\(apiKey)"
 
         guard let url = URL(string: urlString) else {
             // return an error

@@ -29,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell" customModule="Hudl" customModuleProvider="target">
-                                        <rect key="frame" x="35" y="0.0" width="306" height="185"/>
+                                        <rect key="frame" x="34.5" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="306" height="185"/>
@@ -37,7 +37,7 @@
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-zq-9bV">
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-fA-UuF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-fA-UuF">
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="JQj-fA-UuF" secondAttribute="height" multiplier="374:125" id="VrU-vN-pOZ"/>
                                                             </constraints>
@@ -120,6 +120,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="udf-xX-twd"/>
+                    <connections>
+                        <outlet property="hudlCollectionView" destination="ihc-m4-EnD" id="weg-Se-4Oi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
