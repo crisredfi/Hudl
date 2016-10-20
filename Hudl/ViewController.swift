@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-fileprivate let kCellMargins: CGFloat = 14
+fileprivate let kCellMargins: CGFloat = 30
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HudlViewModelProtocol {
     @IBOutlet weak var hudlCollectionView: UICollectionView!
@@ -50,6 +50,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.youtubeTitle?.text = videoModel?.title ?? ""
             cell.youtubeSubtitle?.text = videoModel?.publishedAt
             let imageManager = SDWebImageManager.shared()
+            // reset the possible image from recicled cell.
+            cell.youtubeImage?.image = nil
             if let imageURLString = videoModel?.thumnbnails.last?.url {
 
                 let imageURL = URL(string: imageURLString)
@@ -68,10 +70,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width = UIScreen.main.bounds.width
-        let cell = collectionView.cellForItem(at: indexPath)
-        // check for heigh. if unwrap fails, assign default height.
-        let height = cell?.bounds.size.height ?? CGFloat(185)
-
         switch UIDevice.current.userInterfaceIdiom {
         case .pad:
             width = width / 2
@@ -80,7 +78,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             break
         }
 
-        return CGSize(width: width - kCellMargins, height: height)
+        return CGSize(width: width - kCellMargins, height: CGFloat(185))
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        guard let flowLayout = hudlCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+
+        flowLayout.invalidateLayout()
     }
 
     // MARK: HudlViewModelDelegate
