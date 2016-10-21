@@ -25,6 +25,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 98, height: 34) )
+        imageView.image = UIImage.init(named: "hudl-logo-light")
+        imageView.contentMode = .scaleAspectFit
+
+        navigationItem.titleView = imageView
     }
 
     override func didReceiveMemoryWarning() {
