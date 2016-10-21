@@ -6,8 +6,6 @@
 //  Copyright © 2016 Aleix Guri. All rights reserved.
 //
 
-import Foundation
-
 enum thumbmailError: Error {
     case missingData
 }
@@ -15,16 +13,22 @@ enum thumbmailError: Error {
 struct ThumbmailModel {
     var url: String
     var width: Int
-    var heigh: Int
+    var height: Int
+
+    init(url: String, width: Int, height:Int) {
+        self.url = url
+        self.width = width
+        self.height = height
+    }
 
     init?(data: [String: AnyObject]?) throws {
         guard let url = data?["url"] as? String,
             let width = data?["width"] as? Int, // cast just in case
-            let heigh = data?["height"] as? Int else {
+            let height = data?["height"] as? Int else {
                 throw thumbmailError.missingData
         }
         self.url = url
         self.width = width
-        self.heigh = heigh
+        self.height = height
     }
 }

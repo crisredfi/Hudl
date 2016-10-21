@@ -24,6 +24,14 @@ struct VideoModel {
     var thumnbnails: [ThumbmailModel] = [ThumbmailModel]()
     var videoId: String?
 
+    init(title:String, description:String, thumbnails:[ThumbmailModel], publishedAt: String, videoId: String, kind: String = "", etag: String = "", id: String = "", channelId: String = "") {
+        self.title = title
+        self.description = description
+        self.thumnbnails = thumbnails
+        self.publishedAt = publishedAt
+        self.videoId = videoId
+    }
+
     init?(data: [String: AnyObject]?) throws {
 
         guard let json = data else {

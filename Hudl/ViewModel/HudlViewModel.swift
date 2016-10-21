@@ -39,7 +39,13 @@ class HudlViewModel {
         return youtubeVideos.count
     }
 
-    //MARK: data fetcher methods
+    func getFavouritesVideos() {
+        youtubeVideos.removeAll()
+        youtubeVideos.append(contentsOf: HudlRealmManager.getViewModelFromRealm())
+        self.delegate?.didReceiveNewContentData()
+    }
+
+    //MARK: data fetcher private methods
 
     fileprivate func getYoutubeChannelVideos() {
         networkConnection.getChannelId(forCategory: "HudlStudios", completionHandler: {[unowned self] (data, response, error) in
@@ -96,6 +102,5 @@ class HudlViewModel {
             }
             })
     }
-
     
 }

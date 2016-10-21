@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 fileprivate let kCellMargins: CGFloat = 30
 
@@ -37,6 +36,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: collection data state
+
+    @IBAction func didPressBarButtonItem(_ sender: AnyObject) {
+        hudlViewModel?.getFavouritesVideos()
+    }
+
 
     // MARK: collection view data source
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,19 +57,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Configure the cell
 
         if let videoModel = try? hudlViewModel?.getItemAtIndex(index: indexPath.row) {
-            cell.youtubeTitle?.text = videoModel?.title ?? ""
-            cell.youtubeSubtitle?.text = videoModel?.publishedAt
-            let imageManager = SDWebImageManager.shared()
-            // reset the possible image from recicled cell.
-            cell.youtubeImage?.image = nil
-            if let imageURLString = videoModel?.thumnbnails.last?.url {
-
-                let imageURL = URL(string: imageURLString)
-                _ = imageManager?.downloadImage(with: imageURL , options: SDWebImageOptions.refreshCached, progress: nil) {
-                    (image, ErrorType, cacheType, bool, imageURL) -> Void in
-                    cell.youtubeImage?.image = image
-                }
-            }
+            cell.setupCell(videoModel: videoModel)
         }
 
         return cell

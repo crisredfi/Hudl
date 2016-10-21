@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hudlCell" id="V3e-z9-Lex" customClass="HudlCell" customModule="Hudl" customModuleProvider="target">
-                                        <rect key="frame" x="34.5" y="0.0" width="306" height="185"/>
+                                        <rect key="frame" x="35" y="0.0" width="306" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="306" height="185"/>
@@ -62,9 +62,12 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-FI-2Rx">
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8jQ-9Y-tnA"/>
-                                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="jYA-0r-JfW"/>
+                                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jYA-0r-JfW"/>
                                                                             </constraints>
                                                                             <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="didPressFavouriteButton" destination="V3e-z9-Lex" eventType="touchUpInside" id="DPg-Yw-TRW"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -118,7 +121,14 @@
                             <constraint firstItem="ihc-m4-EnD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vFx-Bb-4Hq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="udf-xX-twd"/>
+                    <navigationItem key="navigationItem" id="udf-xX-twd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="ZxA-9f-exV">
+                            <color key="tintColor" red="1" green="0.52941176469999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="didPressBarButtonItem:" destination="BYZ-38-t0r" id="lNs-FC-Bg7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="hudlCollectionView" destination="ihc-m4-EnD" id="weg-Se-4Oi"/>
                     </connections>
@@ -132,7 +142,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kfE-Wv-ooK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TqH-xO-vLx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TqH-xO-vLx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.10422762483358383" green="0.63858944177627563" blue="0.89648300409317017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
