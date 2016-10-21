@@ -11,7 +11,6 @@
 		F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A071DB678B6001CE815 /* AppDelegate.swift */; };
 		F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A091DB678B6001CE815 /* ViewController.swift */; };
 		F0295A0D1DB678B6001CE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A0B1DB678B6001CE815 /* Main.storyboard */; };
-		F0295A101DB678B6001CE815 /* Hudl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */; };
 		F0295A121DB678B6001CE815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0295A111DB678B6001CE815 /* Assets.xcassets */; };
 		F0295A151DB678B6001CE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */; };
 		F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A1F1DB678B6001CE815 /* HudlTests.swift */; };
@@ -41,7 +40,6 @@
 		F0295A071DB678B6001CE815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0295A091DB678B6001CE815 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0295A0C1DB678B6001CE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hudl.xcdatamodel; sourceTree = "<group>"; };
 		F0295A111DB678B6001CE815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0295A141DB678B6001CE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0295A161DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				F0295A111DB678B6001CE815 /* Assets.xcassets */,
 				F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */,
 				F0295A161DB678B6001CE815 /* Info.plist */,
-				F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */,
 				F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */,
 			);
 			path = Hudl;
@@ -332,7 +329,6 @@
 				F0295A301DB6923D001CE815 /* HTTPService.swift in Sources */,
 				F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */,
 				F04BD0921DB8114B00F2A592 /* ThumbmailModel.swift in Sources */,
-				F0295A101DB678B6001CE815 /* Hudl.xcdatamodeld in Sources */,
 				F04BD08F1DB808A600F2A592 /* VideoModel.swift in Sources */,
 				F0295A2E1DB690F5001CE815 /* HudlCell.swift in Sources */,
 				F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */,
@@ -563,19 +559,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F0295A0E1DB678B6001CE815 /* Hudl.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */,
-			);
-			currentVersion = F0295A0F1DB678B6001CE815 /* Hudl.xcdatamodel */;
-			path = Hudl.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F02959FC1DB678B6001CE815 /* Project object */;
 }

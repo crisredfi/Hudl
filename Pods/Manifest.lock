@@ -23,6 +23,11 @@ PODS:
   - libwebp/utils (0.5.1):
     - libwebp/core
   - libwebp/webp (0.5.1)
+  - Realm (2.0.2):
+    - Realm/Headers (= 2.0.2)
+  - Realm/Headers (2.0.2)
+  - RealmSwift (2.0.2):
+    - Realm (= 2.0.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -31,13 +36,16 @@ PODS:
     - SDWebImage/Core
 
 DEPENDENCIES:
+  - RealmSwift
   - SDWebImage (~> 3.8)
   - SDWebImage/WebP
 
 SPEC CHECKSUMS:
   libwebp: b9126f8982a95370cf4eaad9bb3fefd57f052c15
+  Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
+  RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
 
-PODFILE CHECKSUM: 7ad9d6d4e4cee77530de7c262fce38ef451806b8
+PODFILE CHECKSUM: 36abe272513fefb20cd3659fa5b0129ac4ea27a3
 
 COCOAPODS: 1.1.0.rc.2
