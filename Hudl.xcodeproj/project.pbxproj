@@ -23,6 +23,8 @@
 		F09B09E61DBA7CCE000880D8 /* RealmVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09E51DBA7CCE000880D8 /* RealmVideoModel.swift */; };
 		F09B09EA1DBA7E03000880D8 /* RealmThumbnailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09E91DBA7E03000880D8 /* RealmThumbnailModel.swift */; };
 		F09B09EC1DBA7F0D000880D8 /* HudlRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09EB1DBA7F0D000880D8 /* HudlRealmManager.swift */; };
+		F09B09EF1DBAA85B000880D8 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09EE1DBAA85B000880D8 /* Youtube.swift */; };
+		F09B09F11DBAAA66000880D8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F01DBAAA66000880D8 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		F09B09E51DBA7CCE000880D8 /* RealmVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmVideoModel.swift; path = Models/RealmModels/RealmVideoModel.swift; sourceTree = "<group>"; };
 		F09B09E91DBA7E03000880D8 /* RealmThumbnailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmThumbnailModel.swift; path = Models/RealmModels/RealmThumbnailModel.swift; sourceTree = "<group>"; };
 		F09B09EB1DBA7F0D000880D8 /* HudlRealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlRealmManager.swift; path = Manager/HudlRealmManager.swift; sourceTree = "<group>"; };
+		F09B09EE1DBAA85B000880D8 /* Youtube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
+		F09B09F01DBAAA66000880D8 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		F0295A061DB678B6001CE815 /* Hudl */ = {
 			isa = PBXGroup;
 			children = (
+				F09B09ED1DBAA850000880D8 /* ExternalLibrary */,
 				F09B09E71DBA7DA7000880D8 /* Managers */,
 				F04BD0901DB808F500F2A592 /* Models */,
 				F0295A331DB6926C001CE815 /* Cells */,
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F0295A091DB678B6001CE815 /* ViewController.swift */,
+				F09B09F01DBAAA66000880D8 /* PlayerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +199,14 @@
 				F09B09E91DBA7E03000880D8 /* RealmThumbnailModel.swift */,
 			);
 			name = RealmModels;
+			sourceTree = "<group>";
+		};
+		F09B09ED1DBAA850000880D8 /* ExternalLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				F09B09EE1DBAA85B000880D8 /* Youtube.swift */,
+			);
+			name = ExternalLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +372,10 @@
 				F0295A2E1DB690F5001CE815 /* HudlCell.swift in Sources */,
 				F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */,
 				F09B09E61DBA7CCE000880D8 /* RealmVideoModel.swift in Sources */,
+				F09B09F11DBAAA66000880D8 /* PlayerViewController.swift in Sources */,
 				F09B09EC1DBA7F0D000880D8 /* HudlRealmManager.swift in Sources */,
 				F04BD08B1DB7E14000F2A592 /* HudlViewModel.swift in Sources */,
+				F09B09EF1DBAA85B000880D8 /* Youtube.swift in Sources */,
 				F09B09EA1DBA7E03000880D8 /* RealmThumbnailModel.swift in Sources */,
 				F04BD08D1DB7E92900F2A592 /* ChannelModel.swift in Sources */,
 			);

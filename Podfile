@@ -6,6 +6,5 @@ target "Hudl" do
 	pod 'SDWebImage', '~>3.8'
     pod 'SDWebImage/WebP'
     pod 'RealmSwift'
-
 end
 
