@@ -122,14 +122,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="udf-xX-twd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="ZxA-9f-exV">
-                            <color key="tintColor" red="1" green="0.52941176469999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favourite" id="ZxA-9f-exV">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="didPressBarButtonItem:" destination="BYZ-38-t0r" id="lNs-FC-Bg7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="favouritesBarItem" destination="ZxA-9f-exV" id="awv-J6-VHt"/>
                         <outlet property="hudlCollectionView" destination="ihc-m4-EnD" id="weg-Se-4Oi"/>
                     </connections>
                 </viewController>

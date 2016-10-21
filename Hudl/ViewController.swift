@@ -12,9 +12,10 @@ fileprivate let kCellMargins: CGFloat = 30
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HudlViewModelProtocol {
     @IBOutlet weak var hudlCollectionView: UICollectionView!
+    @IBOutlet weak var favouritesBarItem: UIBarButtonItem!
 
     fileprivate let reuseIdentifier = "hudlCell"
-    fileprivate var hudlViewModel: HudlViewModel?
+    fileprivate var hudlViewModel: HudlViewModel!
 
     override func awakeFromNib() {
         hudlViewModel = HudlViewModel()
@@ -39,13 +40,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: collection data state
 
     @IBAction func didPressBarButtonItem(_ sender: AnyObject) {
-        hudlViewModel?.getFavouritesVideos()
+        hudlViewModel.getFavouritesVideos()
     }
 
 
     // MARK: collection view data source
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return hudlViewModel?.getNumberOfItems() ?? 0
+        return hudlViewModel.getNumberOfItems()
     }
 
 
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.backgroundColor = UIColor.black
         // Configure the cell
 
-        if let videoModel = try? hudlViewModel?.getItemAtIndex(index: indexPath.row) {
+        if let videoModel = try? hudlViewModel.getItemAtIndex(index: indexPath.row) {
             cell.setupCell(videoModel: videoModel)
         }
 
@@ -91,6 +92,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // MARK: HudlViewModelDelegate
     func didReceiveNewContentData() {
+        // at this point. hudlViewModel is known that exist.
+        switch hudlViewModel.currentModelState {
+        case ModelViewStatus.youtubeFiles:
+            favouritesBarItem.title = "Favourite"
+        case ModelViewStatus.favouritesFiles:
+            favouritesBarItem.title = "List"
+        }
         hudlCollectionView.reloadData()
     }
 }

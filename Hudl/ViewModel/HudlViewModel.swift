@@ -16,10 +16,16 @@ enum HudlViewError: Error {
     case indexOutOfBounds
 }
 
+enum ModelViewStatus {
+    case youtubeFiles
+    case favouritesFiles
+}
+
 class HudlViewModel {
 
     let networkConnection = HTTPService()
     var youtubeVideos: Array<VideoModel>
+    var currentModelState: ModelViewStatus = .youtubeFiles
 
     var delegate: HudlViewModelProtocol?
 
@@ -40,9 +46,16 @@ class HudlViewModel {
     }
 
     func getFavouritesVideos() {
-        youtubeVideos.removeAll()
-        youtubeVideos.append(contentsOf: HudlRealmManager.getViewModelFromRealm())
-        self.delegate?.didReceiveNewContentData()
+        switch currentModelState {
+        case .youtubeFiles:
+            currentModelState = .favouritesFiles
+            youtubeVideos.removeAll()
+            youtubeVideos.append(contentsOf: HudlRealmManager.getViewModelFromRealm())
+            self.delegate?.didReceiveNewContentData()
+        case .favouritesFiles:
+            currentModelState = .youtubeFiles
+            getYoutubeChannelVideos()
+        }
     }
 
     //MARK: data fetcher private methods

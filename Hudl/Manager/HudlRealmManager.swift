@@ -38,7 +38,6 @@ class HudlRealmManager {
         try? realm.write {
             realm.add(newHudlRealmViewModel, update: true)
         }
-
     }
 
     class func getViewModelFromRealm() -> [VideoModel] {
@@ -55,7 +54,7 @@ class HudlRealmManager {
             let newVideoModel = VideoModel.init(title: realmVideo.title, description: realmVideo.videoDescription, thumbnails: thumbnails, publishedAt: realmVideo.publishedAt,videoId: realmVideo.videoId)
             modeledVideos.append(newVideoModel)
         }
-
+        
         return modeledVideos
     }
 
