@@ -119,7 +119,7 @@ open class Youtube: NSObject {
 
     dataTask?.resume()
     
-    group.wait(timeout: DispatchTime.distantFuture)
+   // group.wait(timeout: DispatchTime.distantFuture)
     let parts = responseString.dictionaryFromQueryStringComponents()
     if parts.count > 0 {
       var videoTitle: String = ""
@@ -161,20 +161,19 @@ open class Youtube: NSObject {
   @param youtubeURL the the complete youtube video url
   @param completeBlock the block which is called on completion
 
-  */
-  open static func h264videosWithYoutubeURL(_ youtubeURL: URL,completion: ((
-    _ videoInfo: [String: AnyObject]?, _ error: NSError?) -> Void)?) {
-      let priority = DispatchQueue.GlobalQueuePriority.background
-      DispatchQueue.global(priority: priority).async {
-        if let youtubeID = self.youtubeIDFromYoutubeURL(youtubeURL), let videoInformation = self.h264videosWithYoutubeID(youtubeID) {
-          DispatchQueue.main.async {
-            completion?(videoInformation, nil)
-          }
-        }else{
-          DispatchQueue.main.async {
-            completion?(nil, NSError(domain: "com.player.youtube.backgroundqueue", code: 1001, userInfo: ["error": "Invalid YouTube URL"]))
-          }
+     */
+    open static func h264videosWithYoutubeURL(_ youtubeURL: URL,completion: ((
+        _ videoInfo: [String: AnyObject]?, _ error: NSError?) -> Void)?) {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+            if let youtubeID = self.youtubeIDFromYoutubeURL(youtubeURL), let videoInformation = self.h264videosWithYoutubeID(youtubeID) {
+                DispatchQueue.main.async {
+                    completion?(videoInformation, nil)
+                }
+            }else{
+                DispatchQueue.main.async {
+                    completion?(nil, NSError(domain: "com.player.youtube.backgroundqueue", code: 1001, userInfo: ["error": "Invalid YouTube URL"]))
+                }
+            }
         }
-      }
     }
-  }
+}

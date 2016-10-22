@@ -123,7 +123,6 @@
 		F0295A061DB678B6001CE815 /* Hudl */ = {
 			isa = PBXGroup;
 			children = (
-				F09B09ED1DBAA850000880D8 /* ExternalLibrary */,
 				F09B09E71DBA7DA7000880D8 /* Managers */,
 				F04BD0901DB808F500F2A592 /* Models */,
 				F0295A331DB6926C001CE815 /* Cells */,
@@ -134,6 +133,7 @@
 				F0295A111DB678B6001CE815 /* Assets.xcassets */,
 				F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */,
 				F0295A161DB678B6001CE815 /* Info.plist */,
+				F09B09ED1DBAA850000880D8 /* ExternalLibrary */,
 			);
 			path = Hudl;
 			sourceTree = "<group>";

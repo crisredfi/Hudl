@@ -25,17 +25,23 @@ class HudlCell: UICollectionViewCell {
     func setupCell(videoModel: VideoModel?) {
         self.videoModel = videoModel
         youtubeTitle?.text = videoModel?.title ?? ""
-        youtubeSubtitle?.text = videoModel?.publishedAt
+        youtubeSubtitle?.text = videoModel?.description
         let imageManager = SDWebImageManager.shared()
         // reset the possible image from recicled cell.
         youtubeImage?.image = nil
         if let imageURLString = videoModel?.thumnbnails.last?.url {
-
             let imageURL = URL(string: imageURLString)
             _ = imageManager?.downloadImage(with: imageURL , options: SDWebImageOptions.refreshCached, progress: nil) {
                 (image, ErrorType, cacheType, bool, imageURL) -> Void in
                 self.youtubeImage?.image = image
             }
+        }
+
+        if HudlRealmManager.isIdAlreadyHighlighted(videoId: (videoModel?.videoId)!) {
+            youtubeFavourite.setTitle("unfavourite", for: .normal)
+        } else {
+            youtubeFavourite.setTitle("favourite", for: .normal)
+
         }
     }
 
@@ -43,7 +49,13 @@ class HudlCell: UICollectionViewCell {
 
         // video model exist, if not, the cell would have crashed before.
         // hence we are fully secure to call "!" instead to guard the videoModel.
-        HudlRealmManager.saveViewModelToRealm(videoModel!)
+        if HudlRealmManager.isIdAlreadyHighlighted(videoId: (videoModel?.videoId)!) {
+            youtubeFavourite.setTitle("favourite", for: .normal)
+            HudlRealmManager.removeModelFromRealm(videoModel!)
+        } else {
+            youtubeFavourite.setTitle("unfavourite", for: .normal)
+            HudlRealmManager.saveViewModelToRealm(videoModel!)
+        }
     }
 
 }

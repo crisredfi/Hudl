@@ -46,10 +46,10 @@ class HudlViewModel {
     }
 
     func getFavouritesVideos() {
+        youtubeVideos.removeAll()
         switch currentModelState {
         case .youtubeFiles:
             currentModelState = .favouritesFiles
-            youtubeVideos.removeAll()
             youtubeVideos.append(contentsOf: HudlRealmManager.getViewModelFromRealm())
             self.delegate?.didReceiveNewContentData()
         case .favouritesFiles:
@@ -75,13 +75,12 @@ class HudlViewModel {
                     }
                     self.getVideosForChannelUploadsIdentifier(channelModel.uploads)
                 } catch (ChannelError.channelParsingError) {
-
+                    // error parsing. should create an alert view or some UI feedback
                 } catch (ChannelError.defaultError) {
-
+                    // error with Channel. should create an alert view or some UI feedback
                 } catch {
-
+                    // error. should create an alert view or some UI feedback
                 }
-
             }
 
             })

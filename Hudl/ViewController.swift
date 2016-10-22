@@ -68,12 +68,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! HudlCell
-        guard let videoId = cell.videoModel?.videoId else {
+        guard let videoId = cell.videoModel?.videoId,
+            let videoURL = URL(string: "http://www.youtube.com/watch?v=\(videoId)") else {
             return
         }
-        let videoURL = NSURL(string: "http://www.youtube.com/watch?v=\(videoId)")
-        // use 3rd party library to obtain real youtube URL 
-        Youtube.h264videosWithYoutubeURL(videoURL as! URL) { (videoInfo, error) -> Void in
+        // use 3rd party library to obtain real youtube URL
+        Youtube.h264videosWithYoutubeURL(videoURL) { (videoInfo, error) -> Void in
             if let videoURLString = videoInfo?["url"] as? String {
                 let videoURL = NSURL(string: videoURLString)
                 DispatchQueue.main.async {
@@ -85,26 +85,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-//    // MARK: UICollectionViewDelegateFlowLayout
-//    // lets modify the width of the collection view for iphones to fit full screen
-//    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-//                               sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        var width = UIScreen.main.bounds.width
-//        switch UIDevice.current.userInterfaceIdiom {
-//        case .pad:
-//            width = width / 2
-//            break
-//        default:
-//            break
-//        }
-//
-//        print (width)
-//        return CGSize(width: width - kCellMargins, height: CGFloat(185))
-//    }
-//
+    // MARK: UICollectionViewDelegateFlowLayout
+    // lets modify the width of the collection view for iphones to fit full screen
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var width = UIScreen.main.bounds.width
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            width = width / 2
+            break
+        default:
+            break
+        }
+        return CGSize(width: width - kCellMargins, height: CGFloat(185))
+    }
+
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
+        guard let flowLayout = hudlCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+
+        flowLayout.invalidateLayout()
+    }
+
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
         guard let flowLayout = hudlCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }
