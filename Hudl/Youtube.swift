@@ -119,7 +119,7 @@ open class Youtube: NSObject {
 
     dataTask?.resume()
     
-   // group.wait(timeout: DispatchTime.distantFuture)
+    group.wait(timeout: DispatchTime.distantFuture)
     let parts = responseString.dictionaryFromQueryStringComponents()
     if parts.count > 0 {
       var videoTitle: String = ""

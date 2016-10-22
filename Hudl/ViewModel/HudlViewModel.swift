@@ -8,12 +8,16 @@
 
 import Foundation
 
+fileprivate let kYoutubChannelCategorySearch = "HudlStudios"
+
 protocol HudlViewModelProtocol {
     func didReceiveNewContentData() // this will trigger a UI update
 }
 
 enum HudlViewError: Error {
     case indexOutOfBounds
+    case wrongChannelParsing
+    case wrongVideoParsing
 }
 
 enum ModelViewStatus {
@@ -61,29 +65,62 @@ class HudlViewModel {
     //MARK: data fetcher private methods
 
     fileprivate func getYoutubeChannelVideos() {
-        networkConnection.getChannelId(forCategory: "HudlStudios", completionHandler: {[unowned self] (data, response, error) in
+        networkConnection.getChannelId(forCategory: kYoutubChannelCategorySearch, completionHandler: {[unowned self] (data, response, error) in
             if let _ = error {
                 // error. early exit. should crete a throw for error cases or call for an alert view.
                 return
             }
-
             if let channelData = data {
                 do {
-                    guard let jsonWithObjectRoot = try? JSONSerialization.jsonObject(with: channelData, options: []),
-                        let channelModel = try ChannelModel.init(data: jsonWithObjectRoot as? [String: AnyObject]) else {
-                            return
-                    }
-                    self.getVideosForChannelUploadsIdentifier(channelModel.uploads)
-                } catch (ChannelError.channelParsingError) {
-                    // error parsing. should create an alert view or some UI feedback
-                } catch (ChannelError.defaultError) {
-                    // error with Channel. should create an alert view or some UI feedback
+                    try self.parseChannelsData(channelData: channelData)
                 } catch {
-                    // error. should create an alert view or some UI feedback
+                    // catch the parsing error.
                 }
             }
 
             })
+    }
+
+    internal func parseChannelsData(channelData: Data) throws {
+        do {
+            guard let jsonWithObjectRoot = try? JSONSerialization.jsonObject(with: channelData, options: []),
+                let channelModel = try ChannelModel.init(data: jsonWithObjectRoot as? [String: AnyObject]) else {
+                    throw HudlViewError.wrongChannelParsing
+            }
+            self.getVideosForChannelUploadsIdentifier(channelModel.uploads)
+        } catch (ChannelError.channelParsingError) {
+            // error parsing. should create an alert view or some UI feedback
+
+        } catch (ChannelError.defaultError) {
+            // error with Channel. should create an alert view or some UI feedback
+            throw HudlViewError.wrongChannelParsing
+        } catch {
+            // error. should create an alert view or some UI feedback
+            throw HudlViewError.wrongChannelParsing
+        }
+    }
+
+    internal func parseVideosForChannel(videoData: Data) throws {
+        guard let jsonWithObjectRoot = try JSONSerialization.jsonObject(with: videoData, options: []) as? [String: AnyObject],
+            let items = jsonWithObjectRoot["items"] as? [AnyObject] else {
+                throw HudlViewError.wrongVideoParsing
+        }
+        do {
+            for item in items {
+                if let videoModel = try VideoModel.init(data: item as? [String : AnyObject]) {
+                    self.youtubeVideos.append(videoModel)
+                } else {
+                    throw HudlViewError.wrongVideoParsing
+                }
+            }
+            // NSURLSession runs in background threads. Hence we need to update the UI in Main thread.
+            // View controller only handles the view, so is the viewModel the one handling the thread update
+            DispatchQueue.main.async {
+                self.delegate?.didReceiveNewContentData()
+            }
+        } catch {
+            throw HudlViewError.wrongVideoParsing
+        }
     }
 
     fileprivate func getVideosForChannelUploadsIdentifier(_ uploads: String) {
@@ -94,22 +131,9 @@ class HudlViewModel {
             }
             if let videoData = data {
                 do {
-                    guard let jsonWithObjectRoot = try JSONSerialization.jsonObject(with: videoData, options: []) as? [String: AnyObject],
-                        let items = jsonWithObjectRoot["items"] as? [AnyObject] else {
-                            return
-                    }
-
-                    for item in items {
-                        if let videoModel = try VideoModel.init(data: item as? [String : AnyObject]) {
-                            self.youtubeVideos.append(videoModel)
-                        }
-                    }
-                    // NSURLSession runs in background threads. Hence we need to update the UI in Main thread.
-                    // View controller only handles the view, so is the viewModel the one handling the thread update
-                    DispatchQueue.main.async {
-                        self.delegate?.didReceiveNewContentData()
-                    }
+                    try self.parseVideosForChannel(videoData: videoData)
                 } catch {
+                    // error. early exit. should crete a throw for error cases or call for an alert view.
                 }
             }
             })

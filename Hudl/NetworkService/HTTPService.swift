@@ -7,8 +7,8 @@
 //
 import UIKit
 
-private let kLoginBaseURL = "https://www.googleapis.com/youtube/v3/"
-private let apiKey = "AIzaSyC5OHZkDYt6A9igTuVBadYigPw8VFnkqLg"
+fileprivate let kLoginBaseURL = "https://www.googleapis.com/youtube/v3/"
+fileprivate let apiKey = "AIzaSyC5OHZkDYt6A9igTuVBadYigPw8VFnkqLg"
 
 // I will use NSURLSession/shared session since its already a singleton
 // and here I dont need to create a specific session configuration. 
@@ -21,6 +21,9 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol { }
 
+typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+
+
 enum httpserviceError: Error {
     case urlFormatError
 }
@@ -31,13 +34,13 @@ class HTTPService {
     let session: URLSessionProtocol
     let baseURL: URL
 
-    init(session: URLSessionProtocol = URLSession.shared ) {
+    init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
         self.baseURL = URL(string: kLoginBaseURL)!
 
     }
 
-    func getChannelId(forCategory category: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
+    func getChannelId(forCategory category: String, completionHandler: @escaping DataTaskResult) {
         let urlString = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails,snippet&forUsername=\(category)&key=\(apiKey)"
 
         guard let url = URL(string: urlString) else {
@@ -53,7 +56,7 @@ class HTTPService {
         task.resume()
     }
 
-    func getVideos(fromChannelId channelId: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
+    func getVideos(fromChannelId channelId: String, completionHandler: @escaping DataTaskResult) {
         let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=\(channelId)&key=\(apiKey)"
 
         guard let url = URL(string: urlString) else {

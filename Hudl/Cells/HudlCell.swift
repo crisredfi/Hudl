@@ -46,7 +46,6 @@ class HudlCell: UICollectionViewCell {
     }
 
     @IBAction func didPressFavouriteButton() {
-
         // video model exist, if not, the cell would have crashed before.
         // hence we are fully secure to call "!" instead to guard the videoModel.
         if HudlRealmManager.isIdAlreadyHighlighted(videoId: (videoModel?.videoId)!) {

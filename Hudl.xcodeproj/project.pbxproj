@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633EA9AD05A5296AD2412C1B /* Pods_HudlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C1395818E07768E3569B63 /* Pods_HudlTests.framework */; };
 		9602DD8C368BEC22AB723274 /* Pods_Hudl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */; };
 		F0295A081DB678B6001CE815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A071DB678B6001CE815 /* AppDelegate.swift */; };
 		F0295A0A1DB678B6001CE815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A091DB678B6001CE815 /* ViewController.swift */; };
 		F0295A0D1DB678B6001CE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A0B1DB678B6001CE815 /* Main.storyboard */; };
 		F0295A121DB678B6001CE815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0295A111DB678B6001CE815 /* Assets.xcassets */; };
 		F0295A151DB678B6001CE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0295A131DB678B6001CE815 /* LaunchScreen.storyboard */; };
-		F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A1F1DB678B6001CE815 /* HudlTests.swift */; };
 		F0295A2E1DB690F5001CE815 /* HudlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A2D1DB690F5001CE815 /* HudlCell.swift */; };
 		F0295A301DB6923D001CE815 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0295A2F1DB6923D001CE815 /* HTTPService.swift */; };
+		F040D57A1DBBB7F6009703F2 /* HudlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D5791DBBB7F6009703F2 /* HudlTests.swift */; };
+		F040D57C1DBBCC26009703F2 /* HudlRealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D57B1DBBCC26009703F2 /* HudlRealmManagerTests.swift */; };
 		F04BD08B1DB7E14000F2A592 /* HudlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */; };
 		F04BD08D1DB7E92900F2A592 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08C1DB7E92900F2A592 /* ChannelModel.swift */; };
 		F04BD08F1DB808A600F2A592 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD08E1DB808A600F2A592 /* VideoModel.swift */; };
@@ -25,6 +27,10 @@
 		F09B09EC1DBA7F0D000880D8 /* HudlRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09EB1DBA7F0D000880D8 /* HudlRealmManager.swift */; };
 		F09B09EF1DBAA85B000880D8 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09EE1DBAA85B000880D8 /* Youtube.swift */; };
 		F09B09F11DBAAA66000880D8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F01DBAAA66000880D8 /* PlayerViewController.swift */; };
+		F09B09F31DBBAAAC000880D8 /* HudlViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F21DBBAAAC000880D8 /* HudlViewModelTest.swift */; };
+		F09B09F51DBBAB51000880D8 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F41DBBAB51000880D8 /* URLSessionDataTaskMock.swift */; };
+		F09B09F71DBBAB62000880D8 /* NSURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F61DBBAB62000880D8 /* NSURLSessionMock.swift */; };
+		F09B09F91DBBADB0000880D8 /* HTTPServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B09F81DBBADB0000880D8 /* HTTPServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hudl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B4771D2FF267A3E0A556832 /* Pods-HudlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HudlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HudlTests/Pods-HudlTests.release.xcconfig"; sourceTree = "<group>"; };
+		54802AA0353AAA6474526DFE /* Pods-HudlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HudlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HudlTests/Pods-HudlTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1C1395818E07768E3569B63 /* Pods_HudlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HudlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1925490059627C468029497 /* Pods-Hudl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hudl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hudl/Pods-Hudl.debug.xcconfig"; sourceTree = "<group>"; };
 		DE6F8310FC2F8DD07B6962EF /* Pods-Hudl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hudl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hudl/Pods-Hudl.release.xcconfig"; sourceTree = "<group>"; };
 		F0295A041DB678B6001CE815 /* Hudl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hudl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +58,11 @@
 		F0295A141DB678B6001CE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0295A161DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0295A1B1DB678B6001CE815 /* HudlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HudlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0295A1F1DB678B6001CE815 /* HudlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudlTests.swift; sourceTree = "<group>"; };
 		F0295A211DB678B6001CE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0295A2D1DB690F5001CE815 /* HudlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlCell.swift; path = Cells/HudlCell.swift; sourceTree = "<group>"; };
 		F0295A2F1DB6923D001CE815 /* HTTPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPService.swift; path = NetworkService/HTTPService.swift; sourceTree = "<group>"; };
+		F040D5791DBBB7F6009703F2 /* HudlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudlTests.swift; sourceTree = "<group>"; };
+		F040D57B1DBBCC26009703F2 /* HudlRealmManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudlRealmManagerTests.swift; sourceTree = "<group>"; };
 		F04BD08A1DB7E14000F2A592 /* HudlViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlViewModel.swift; path = ViewModel/HudlViewModel.swift; sourceTree = "<group>"; };
 		F04BD08C1DB7E92900F2A592 /* ChannelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelModel.swift; path = Models/ChannelModel.swift; sourceTree = "<group>"; };
 		F04BD08E1DB808A600F2A592 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoModel.swift; path = Models/VideoModel.swift; sourceTree = "<group>"; };
@@ -62,6 +72,10 @@
 		F09B09EB1DBA7F0D000880D8 /* HudlRealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudlRealmManager.swift; path = Manager/HudlRealmManager.swift; sourceTree = "<group>"; };
 		F09B09EE1DBAA85B000880D8 /* Youtube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
 		F09B09F01DBAAA66000880D8 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F09B09F21DBBAAAC000880D8 /* HudlViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudlViewModelTest.swift; sourceTree = "<group>"; };
+		F09B09F41DBBAB51000880D8 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		F09B09F61DBBAB62000880D8 /* NSURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLSessionMock.swift; sourceTree = "<group>"; };
+		F09B09F81DBBADB0000880D8 /* HTTPServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633EA9AD05A5296AD2412C1B /* Pods_HudlTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,8 @@
 			children = (
 				C1925490059627C468029497 /* Pods-Hudl.debug.xcconfig */,
 				DE6F8310FC2F8DD07B6962EF /* Pods-Hudl.release.xcconfig */,
+				54802AA0353AAA6474526DFE /* Pods-HudlTests.debug.xcconfig */,
+				0B4771D2FF267A3E0A556832 /* Pods-HudlTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -96,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				027F7B290CA0AC01C2ACAF9A /* Pods_Hudl.framework */,
+				B1C1395818E07768E3569B63 /* Pods_HudlTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,8 +159,13 @@
 		F0295A1E1DB678B6001CE815 /* HudlTests */ = {
 			isa = PBXGroup;
 			children = (
-				F0295A1F1DB678B6001CE815 /* HudlTests.swift */,
 				F0295A211DB678B6001CE815 /* Info.plist */,
+				F040D5791DBBB7F6009703F2 /* HudlTests.swift */,
+				F09B09F21DBBAAAC000880D8 /* HudlViewModelTest.swift */,
+				F09B09F61DBBAB62000880D8 /* NSURLSessionMock.swift */,
+				F09B09F41DBBAB51000880D8 /* URLSessionDataTaskMock.swift */,
+				F09B09F81DBBADB0000880D8 /* HTTPServiceTest.swift */,
+				F040D57B1DBBCC26009703F2 /* HudlRealmManagerTests.swift */,
 			);
 			path = HudlTests;
 			sourceTree = "<group>";
@@ -236,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0295A271DB678B6001CE815 /* Build configuration list for PBXNativeTarget "HudlTests" */;
 			buildPhases = (
+				E6B8A9B2D5DFA9473B66683C /* [CP] Check Pods Manifest.lock */,
 				F0295A171DB678B6001CE815 /* Sources */,
 				F0295A181DB678B6001CE815 /* Frameworks */,
 				F0295A191DB678B6001CE815 /* Resources */,
+				AE6EB0019AD0B58AE7F9676B /* [CP] Embed Pods Frameworks */,
+				764CBBDFED2EA1EAB3B04E6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -328,6 +354,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hudl/Pods-Hudl-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		764CBBDFED2EA1EAB3B04E6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HudlTests/Pods-HudlTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A8908AD05852C2BCA21D8574 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,7 +384,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hudl/Pods-Hudl-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE6EB0019AD0B58AE7F9676B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HudlTests/Pods-HudlTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B58CB4B1F4E64D97BF47CCC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B8A9B2D5DFA9473B66683C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,7 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0295A201DB678B6001CE815 /* HudlTests.swift in Sources */,
+				F09B09F31DBBAAAC000880D8 /* HudlViewModelTest.swift in Sources */,
+				F040D57A1DBBB7F6009703F2 /* HudlTests.swift in Sources */,
+				F09B09F51DBBAB51000880D8 /* URLSessionDataTaskMock.swift in Sources */,
+				F09B09F91DBBADB0000880D8 /* HTTPServiceTest.swift in Sources */,
+				F040D57C1DBBCC26009703F2 /* HudlRealmManagerTests.swift in Sources */,
+				F09B09F71DBBAB62000880D8 /* NSURLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +620,7 @@
 		};
 		F0295A281DB678B6001CE815 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54802AA0353AAA6474526DFE /* Pods-HudlTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -559,6 +636,7 @@
 		};
 		F0295A291DB678B6001CE815 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B4771D2FF267A3E0A556832 /* Pods-HudlTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
