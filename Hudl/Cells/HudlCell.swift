@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 
-
 class HudlCell: UICollectionViewCell {
 
     @IBOutlet weak var youtubeImage: UIImageView!
