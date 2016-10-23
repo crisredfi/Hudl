@@ -51,11 +51,9 @@ class HudlRealmManager {
     class func isIdAlreadyHighlighted(videoId: String) -> Bool {
         let videoExists = realm.object(ofType: RealmVideoModel.self, forPrimaryKey: videoId)
         return videoExists == nil ? false: true
-
     }
 
     class func getViewModelFromRealm() -> [VideoModel] {
-
         let realmYoutubeVideoList = realm.objects(RealmVideoModel.self)
         var modeledVideos = [VideoModel]()
         // Map them back to ViewModel

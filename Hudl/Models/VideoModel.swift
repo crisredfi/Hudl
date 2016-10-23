@@ -33,13 +33,13 @@ struct VideoModel {
     }
 
     init?(data: [String: AnyObject]?) throws {
-
         guard let json = data else {
             throw VideoModelError.jsonMalformed
         }
         // now we want to check if values are in the JSON.
         // since I believe that Youtube might not return some values sometimes.
-        // I wont use guard for early exit. will use if let instead.
+        // I wont use guard for early exit. Also since we have declared values as
+        // optionals, we are safe.
 
         // youtube main values
         self.kind = json["kind"] as? String

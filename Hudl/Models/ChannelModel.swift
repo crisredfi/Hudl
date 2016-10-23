@@ -18,13 +18,11 @@ enum ChannelError: Error {
     case defaultError
 }
 
-
 struct ChannelModel {
 
     var uploads: String
 
     init?(data: [String: AnyObject]?) throws {
-
         guard let json = data,
             // check for content details
             let items = json[kItemsKey] as? [AnyObject],
@@ -38,7 +36,6 @@ struct ChannelModel {
             let uploads = relatedPlaylist[kUploadsKeyKey] as? String else {
                 throw ChannelError.channelParsingError
         }
-
         self.uploads = uploads
     }
 
